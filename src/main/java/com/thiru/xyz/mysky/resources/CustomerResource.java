@@ -18,7 +18,6 @@ public class CustomerResource {
 	CustomerService customerService = new CustomerService();
 
 	@GET
-
 	public List<Customer> getCustomers() {
 		return customerService.getCustomers();
 	}
@@ -28,7 +27,7 @@ public class CustomerResource {
 	public Customer getCustomer(@PathParam("customerID") String customerID) {
 		return customerService.getCustomer(customerID);
 	}
-	
+
 	@GET
 	@Path("/{customerID}/location")
 	public String getCustomerLocation(@PathParam("customerID") String customerID) {
